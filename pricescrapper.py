@@ -24,7 +24,8 @@ def check_price():
 
     print(price)
 
-    converted_price=float(price[1:5])
+    converted_price=float(price[1:5])  #The problem occurs here
+
 
     wanted_price=3,000  #the price u need
     if(converted_price<=3,000):
@@ -35,9 +36,10 @@ def check_price():
 
 def sendmail():
     
+    #The username and password  are removed and should be added before execution
 
-    username='natsupilaka@gmail.com'
-    password='crazydudes'
+    username='sender email'
+    password='sender password'
     subject="price fell down"
 
     content='The price has decreased'
@@ -57,7 +59,7 @@ def sendmail():
     mail.login('username','password')
 
     #send message
-    mail.sendmail('natsupilaka@gmail.com','suryapilaka@gmail.com',msg)
+    mail.sendmail('Sender email ','Reciever email',msg)
 
     #end mail connection 
     mail.close()
